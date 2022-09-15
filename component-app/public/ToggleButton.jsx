@@ -7,7 +7,6 @@ export default function ToggleButton({ leftChoice, rightChoice, choice, onChange
     <div>
       <button disabled={choice} onClick={handleButtonClick}>{leftChoice}</button>
       <button disabled={!choice} onClick={handleButtonClick}>{rightChoice}</button>
-      <button disabled={!choice} onClick={handleButtonClick}>{rightChoice}</button>
     </div>
   );
 }

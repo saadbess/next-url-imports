@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   experimental: {
-    urlImports: ['http://localhost:3001'],
+    urlImports: ['https://saadbess.github.io'],
   },
   webpack: (config) => {
     config.module.rules.push({
