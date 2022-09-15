@@ -1,8 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import ToggleButton from '../public/ToggleButton.jsx'
+import { useState } from 'react';
 
 export default function Home() {
+  const [choice, setChoice] = useState(false);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,6 +16,11 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <ToggleButton leftChoice="on" rightChoice="off" choice={choice} onChange={setChoice} />
+        <div>
+          {choice ? 'left' : 'right'}
+        </div>
+
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -33,7 +42,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
+            href="https://github.com/vercel/next.js/tree/master/examples"
             className={styles.card}
           >
             <h2>Examples &rarr;</h2>
